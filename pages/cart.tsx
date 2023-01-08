@@ -3,7 +3,7 @@ import React from "react";
 import { AxiosResponse } from "axios";
 import axios from "axios";
 import CartItem from "../components/CartItem";
-import { Box, Grid, Text } from "@chakra-ui/react";
+import { Box, Grid } from "@chakra-ui/react";
 
 
 export interface cartType {
@@ -38,9 +38,7 @@ const Cart = ({ cart }: Props) => {
   );
 };
 
-export const getServerSideProps: GetServerSideProps<{
-  cart: cartType[];
-}> = async () => {
+export const getServerSideProps: GetServerSideProps = async () => {
   const data: AxiosResponse<cartType[]> = await axios.get(
     "http://localhost:8080/cart"
   );
