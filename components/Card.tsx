@@ -9,8 +9,8 @@ import {
   Heading,
   Text,
   Stack,
-  Image,
 } from "@chakra-ui/react";
+import Image from "next/image";
 
 const Card = ({
   id,
@@ -57,13 +57,7 @@ const Card = ({
               },
             }}
           >
-            <Image
-              rounded={"lg"}
-              height={230}
-              width={282}
-              objectFit={"cover"}
-              src={image}
-            />
+            <Image src={image} alt={title} width="300" height={"399"} />
           </Box>
           <Stack pt={10} align={"center"}>
             <Text

@@ -84,7 +84,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
   });
 
   return {
-    paths: data.data.map((prod: productsType) => ({
+    paths: data?.data?.map((prod: productsType) => ({
       params: { id: `${prod.id}` },
     })),
     fallback: false,
@@ -101,7 +101,7 @@ export const getStaticProps: GetStaticProps<{ product: productsType }> = async (
 
   return {
     props: {
-      product: product.data,
+      product: product?.data,
     },
   };
 };

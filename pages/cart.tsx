@@ -46,7 +46,7 @@ export const getServerSideProps: GetServerSideProps<{
 
   return {
     props: {
-      cart: data.data,
+      cart: data?.data,
     },
   };
 };

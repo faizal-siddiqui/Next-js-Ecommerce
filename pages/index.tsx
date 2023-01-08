@@ -56,7 +56,7 @@ export const getStaticProps: GetStaticProps<{
 
   return {
     props: {
-      products: data.data,
+      products: data?.data,
     },
   };
 };
