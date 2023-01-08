@@ -5,6 +5,7 @@ import axios from "axios";
 import CartItem from "../components/CartItem";
 import { Box, Grid, Text } from "@chakra-ui/react";
 
+
 export interface cartType {
   id: number;
   title: string;
